@@ -1,0 +1,1 @@
+loadstring(game:HttpGet("https://github.com/isoantii/pets/blob/main/supadupa.lua?raw=true", true))()
