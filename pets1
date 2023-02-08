@@ -1,5 +1,3 @@
-loadstring(game:HttpGet("https://milkup.info/script/PetSimulatorX/"))()
-
 print ("Speed")
 local speed = 75 -- Add the amount of speed you want here!
  
@@ -7,19 +5,6 @@ spawn(function()
 while wait() do
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speed
 end
-end)
-
-print("FPS Cap + Alt Tab Optimization")
-local InputService = game:GetService'UserInputService'
-local RunService = game:GetService'RunService'
-RunService:Set3dRenderingEnabled(false)
-InputService.WindowFocused:Connect(function()
-    RunService:Set3dRenderingEnabled(true)
-    setfpscap(18) -- FPS cap 30 fps
-end)
-InputService.WindowFocusReleased:Connect(function()
-    RunService:Set3dRenderingEnabled(false)
-    setfpscap(6) -- FPS cap 10 fps
 end)
 
 print ("potato")
@@ -46,3 +31,18 @@ elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
 v.Lifetime = NumberRange.new(0)
     end
 end
+
+print("FPS Cap + Alt Tab Optimization")
+local InputService = game:GetService'UserInputService'
+local RunService = game:GetService'RunService'
+RunService:Set3dRenderingEnabled(false)
+InputService.WindowFocused:Connect(function()
+    RunService:Set3dRenderingEnabled(true)
+    setfpscap(18) -- FPS cap 18 fps
+end)
+InputService.WindowFocusReleased:Connect(function()
+    RunService:Set3dRenderingEnabled(false)
+    setfpscap(6) -- FPS cap 6 fps
+end)
+
+loadstring(game:HttpGet("https://milkup.info/script/PetSimulatorX/"))()
