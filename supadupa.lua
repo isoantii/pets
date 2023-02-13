@@ -42,7 +42,7 @@ InputService.WindowFocused:Connect(function()
 end)
 InputService.WindowFocusReleased:Connect(function()
     RunService:Set3dRenderingEnabled(false)
-    setfpscap(6) -- FPS cap 6 fps
+    setfpscap(0) -- FPS cap 0 fps
 end)
 
 loadstring(game:HttpGet("https://milkup.info/script/PetSimulatorX/"))()
